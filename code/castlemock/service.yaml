@@ -1,0 +1,18 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: castlemock-service
+  name: castlemock-service
+  # namespace: integracao
+spec:
+  type: NodePort
+  ports:
+  - name: castlemock-port
+    port: 80
+    # nodePort: 30181
+    targetPort: 8080
+  selector:
+    app: castlemock
+

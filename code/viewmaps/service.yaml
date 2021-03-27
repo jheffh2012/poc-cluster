@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: viewmap-service
+  name: viewmap-service
+  # namespace: integracao
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    protocol: TCP
+    name: viewmap-port
+    targetPort: 80
+  selector:
+    app: viewmap

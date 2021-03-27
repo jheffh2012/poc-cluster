@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: viewmap
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: viewmap
+  template:
+    metadata:
+      labels:
+        app: viewmap
+    spec:
+      containers:
+      - name: viewmap
+        image: jheffh2012/viewmap:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+      - name: ws-viewmap
+        image: nginx
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        volumeMounts:
+        - name: nginx-config-volume
+          mountPath: /etc/nginx/nginx.conf
+          subPath: nginx.conf
+      volumes:
+      - name: nginx-config-volume
+        configMap:
+          name: nginx-config-viewmap
+---

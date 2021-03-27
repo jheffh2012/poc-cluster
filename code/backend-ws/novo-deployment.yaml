@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-teste
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-teste
+  template:
+    metadata:
+      labels:
+        app: backend-teste
+    spec:
+      containers:
+      - name: backend-teste
+        image: jheffh2012/cluster-fpm:latest
+        ports:
+        - containerPort: 9000
+          name: fastcgi
+      - name: ws-backend-teste
+        image: jheffh2012/cluster-nginx:latest
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        volumeMounts:
+        - name: nginx-config-volume
+          mountPath: /etc/nginx/conf.d/default.conf
+          subPath: default.conf
+      volumes:
+      - name: nginx-config-volume
+        configMap:
+          name: nginx-config
+---

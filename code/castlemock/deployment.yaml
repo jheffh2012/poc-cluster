@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: castlemock
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: castlemock
+  template:
+    metadata:
+      labels:
+        app: castlemock
+    spec:
+      containers:
+      - name: castlemock
+        image: castlemock/castlemock
+        ports:
+        - containerPort: 8080
+---

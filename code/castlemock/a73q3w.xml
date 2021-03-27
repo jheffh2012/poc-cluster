@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restExportContainer>
+    <applications>
+        <application>
+            <id>LZvpqM</id>
+            <name>api-pagamento</name>
+            <projectId>a73q3w</projectId>
+            <resources/>
+        </application>
+    </applications>
+    <methods>
+        <method>
+            <currentResponseSequenceIndex>0</currentResponseSequenceIndex>
+            <defaultMockResponseId>ITZMUS</defaultMockResponseId>
+            <httpMethod>POST</httpMethod>
+            <id>2IXmJE</id>
+            <mockResponses/>
+            <name>Realizar emissão de boleto</name>
+            <networkDelay>0</networkDelay>
+            <resourceId>WtwZa4</resourceId>
+            <responseStrategy>SEQUENCE</responseStrategy>
+            <simulateNetworkDelay>false</simulateNetworkDelay>
+            <status>MOCKED</status>
+        </method>
+    </methods>
+    <mockResponses>
+        <mockResponse>
+            <body>{"codigo_barras": "12345678901234567890"}</body>
+            <contentEncodings/>
+            <headerQueries/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>ITZMUS</id>
+            <jsonPathExpressions/>
+            <methodId>2IXmJE</methodId>
+            <name>Boleto Gerado com successo!</name>
+            <parameterQueries/>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+    </mockResponses>
+    <project>
+        <created>2021-03-23T21:01:57.551Z</created>
+        <description>Mock de Api de Pagamentos</description>
+        <id>a73q3w</id>
+        <name>api-pagamento</name>
+        <updated>2021-03-23T21:01:57.551Z</updated>
+        <applications/>
+    </project>
+    <resources>
+        <resource>
+            <applicationId>LZvpqM</applicationId>
+            <id>WtwZa4</id>
+            <methods/>
+            <name>Emitir Boleto</name>
+            <uri>/emitir-boleto</uri>
+        </resource>
+    </resources>
+</restExportContainer>
