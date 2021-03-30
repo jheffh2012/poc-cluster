@@ -17,10 +17,24 @@ spec:
       - name: viewmap
         image: jheffh2012/viewmap:latest
         imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8080
       - name: ws-viewmap
         image: nginx
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
         ports:
         - containerPort: 80
           name: http

@@ -44,9 +44,13 @@ spec:
         backend:
           serviceName: rabbit-mq-message
           servicePort: 80
-      - path: /servicos/.*
+      - path: /servicos/iptu/.*
         backend:
           serviceName: servicos
+          servicePort: 80
+      - path: /servicos/stur/.*
+        backend:
+          serviceName: stur
           servicePort: 80
   - host: mock.tcc-pucminas.com
     http:

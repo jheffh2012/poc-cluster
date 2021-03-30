@@ -3,7 +3,7 @@
 import org.apache.camel.builder.AggregationStrategies;
 import org.apache.camel.builder.RouteBuilder;
 
-public class RabbitMQMessage extends RouteBuilder {
+public class RabbitMQ extends RouteBuilder {
   @Override
   public void configure() throws Exception {
 

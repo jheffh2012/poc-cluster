@@ -1,0 +1,1 @@
+kamel run --name Stur ./code/integracao/stur/Stur.java --property-file ./code/integracao/stur/stur.properties --trait platform.enabled=true --trait platform.create-default=true --trait platform.auto=true --trait container.request-cpu=100m --trait container.request-memory=160Mi --trait container.limit-cpu=1000m --trait container.limit-memory=1Gi

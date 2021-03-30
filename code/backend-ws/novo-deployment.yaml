@@ -19,8 +19,22 @@ spec:
         ports:
         - containerPort: 9000
           name: fastcgi
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
       - name: ws-backend-teste
         image: jheffh2012/cluster-nginx:latest
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
         ports:
         - containerPort: 80
           name: http

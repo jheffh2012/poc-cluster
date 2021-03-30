@@ -16,6 +16,13 @@ spec:
       containers:
       - name: frontend
         image: jheffh2012/cluster-front:latest
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
         imagePullPolicy: Always
         ports:
         - containerPort: 80

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restExportContainer>
+    <applications>
+        <application>
+            <id>SuixO3</id>
+            <name>Buscar documentos</name>
+            <projectId>x4h4SL</projectId>
+            <resources/>
+        </application>
+    </applications>
+    <methods>
+        <method>
+            <currentResponseSequenceIndex>0</currentResponseSequenceIndex>
+            <forwardedEndpoint></forwardedEndpoint>
+            <httpMethod>GET</httpMethod>
+            <id>nBoWSf</id>
+            <mockResponses/>
+            <name>Buscar Propriedades</name>
+            <networkDelay>0</networkDelay>
+            <resourceId>YItVog</resourceId>
+            <responseStrategy>RANDOM</responseStrategy>
+            <simulateNetworkDelay>false</simulateNetworkDelay>
+            <status>MOCKED</status>
+        </method>
+    </methods>
+    <mockResponses>
+        <mockResponse>
+            <body>[{"codigo": "789", "endereco": "endereco de teste, 789. Bairro Y", "valor": 200.00, "boletos": [{"codigo": "1612161261", "pago": false, "data": "30/06/2021",  "valor": 100.00}, {"codigo": "1612161261", "pago": false, "data": "30/07/2021",  "valor": 100.00}] }]</body>
+            <contentEncodings/>
+            <headerQueries/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>z0nHNq</id>
+            <jsonPathExpressions/>
+            <methodId>nBoWSf</methodId>
+            <name>Documento 3</name>
+            <parameterQueries>
+                <parameterQuery>
+                    <matchAny>false</matchAny>
+                    <matchCase>true</matchCase>
+                    <matchRegex>false</matchRegex>
+                    <parameter>tipodocumento</parameter>
+                    <query>PR</query>
+                </parameterQuery>
+            </parameterQueries>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>[{"codigo": "465", "endereco": "endereco de teste, 456. Bairro Y", "valor": 130.00, "boletos": [{"codigo": "1612161261", "pago": true, "data": "30/06/2021",  "valor": 43.33}, {"codigo": "1612161261", "pago": true, "data": "30/07/2021",  "valor": 43.33},{"codigo": "1612161261", "pago": false, "data": "30/08/2021",  "valor": 43.34}] }]</body>
+            <contentEncodings/>
+            <headerQueries/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>MNBDYX</id>
+            <jsonPathExpressions/>
+            <methodId>nBoWSf</methodId>
+            <name>Documentos 2</name>
+            <parameterQueries>
+                <parameterQuery>
+                    <matchAny>false</matchAny>
+                    <matchCase>true</matchCase>
+                    <matchRegex>false</matchRegex>
+                    <parameter>tipodocumento</parameter>
+                    <query>PJ</query>
+                </parameterQuery>
+            </parameterQueries>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>[{"codigo": "123", "endereco": "endereco de teste, 123. Bairro X", "valor": 125.00, "boletos": [{"codigo": "1612161261", "pago": true, "data": "30/05/2021", "valor": 72.00},{"codigo": "1612161261", "pago": false, "data": "30/07/2021", "valor": 73.00}] }]</body>
+            <contentEncodings/>
+            <headerQueries/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>8ZNxY4</id>
+            <jsonPathExpressions/>
+            <methodId>nBoWSf</methodId>
+            <name>Documentos</name>
+            <parameterQueries>
+                <parameterQuery>
+                    <matchAny>false</matchAny>
+                    <matchCase>true</matchCase>
+                    <matchRegex>false</matchRegex>
+                    <parameter>tipodocumento</parameter>
+                    <query>PF</query>
+                </parameterQuery>
+            </parameterQueries>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+    </mockResponses>
+    <project>
+        <created>2021-03-29T22:25:58.360Z</created>
+        <description>API disponibilizada pelo Sistema Legado STUR</description>
+        <id>x4h4SL</id>
+        <name>api-stur</name>
+        <updated>2021-03-29T22:25:58.360Z</updated>
+        <applications/>
+    </project>
+    <resources>
+        <resource>
+            <applicationId>SuixO3</applicationId>
+            <id>YItVog</id>
+            <methods/>
+            <name>STUR - Buscar propriedades</name>
+            <uri>/propriedades/{tipodocumento}/{documento}</uri>
+        </resource>
+    </resources>
+</restExportContainer>
