@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress
@@ -12,51 +12,75 @@ spec:
   - host: backend.tcc-pucminas.com
     http:
       paths:
-      - path:
+      - path: /
+        pathType: Prefix
         backend:
-          serviceName: backend-service
-          servicePort: 80
+          service:
+            name: backend-service
+            port:
+              number: 80
   - host: frontend.tcc-pucminas.com
     http:
       paths:
-      - path:
+      - path: /
+        pathType: Prefix
         backend:
-          serviceName: frontend-service
-          servicePort: 80
+          service:
+            name: frontend-service
+            port:
+              number: 80
   - host: viewmap.tcc-pucminas.com
     http:
       paths:
-      - path:
+      - path: /
+        pathType: Prefix
         backend:
-          serviceName: viewmap-service
-          servicePort: 80
+          service:
+            name: viewmap-service
+            port:
+              number: 80
   - host: rabbit.tcc-pucminas.com
     http:
       paths:
-      - path:
+      - path: /
+        pathType: Prefix
         backend:
-          serviceName: definition
-          servicePort: 15672
+          service:
+            name: definition
+            port:
+              number: 15672
   - host: integracao.tcc-pucminas.com
     http:
       paths:
-      - path: /rabbit/.*
+      - path: /rabbit
+        pathType: Prefix
         backend:
-          serviceName: rabbit-mq-message
-          servicePort: 80
-      - path: /servicos/iptu/.*
+          service:
+            name: rabbit-mq-message
+            port:
+              number: 80
+      - path: /servicos/iptu
+        pathType: Prefix
         backend:
-          serviceName: servicos
-          servicePort: 80
-      - path: /servicos/stur/.*
+          service:
+            name: servicos  
+            port:
+              number: 80
+      - path: /servicos/stur
+        pathType: Prefix
         backend:
-          serviceName: stur
-          servicePort: 80
+          service:
+            name: stur
+            port:
+              number: 80
   - host: mock.tcc-pucminas.com
     http:
       paths:
-      - path:
+      - path: /
+        pathType: Prefix
         backend:
-          serviceName: castlemock-service
-          servicePort: 80
+          service:
+            name: castlemock-service
+            port:
+              number: 80
       
