@@ -39,7 +39,8 @@ Para o CastleMock:
 kubectl apply -f ./code/castlemock
 ```
 
-Após esses serviços instalados, iremos configurar a aplicação backend e frontend:
+Após esses serviços instalados, deve-se importar os arquivos disponíveis em './code/legados', são as APIs de mock utilizadas para os testes da arquitetura.
+Após isso, iremos configurar a aplicação backend e frontend:
 
 ```
 kubectl apply -f ./code/backend-ws
@@ -59,7 +60,6 @@ após isso vamos acessar o container do backend para rodar as migrações do ban
 kubectl exec -i -t POD-BACKEND-WS --container backend-teste -- /bin/bash
 php artisan migrate
 ```
-
 
 ## Adicionando serviços de integração com legado e mensageria
 
