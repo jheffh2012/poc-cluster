@@ -1,4 +1,4 @@
-# Cluster com RabbitMQ + CastleMock + BackEnd/Lumen/PHP + FrontEnd/Angular/JS
+# Cluster com RabbitMQ + CastleMock + BackEnd/Lumen/PHP + FrontEnd/Angular/JS + Camel K Operator
 
 ## Dependências
 
